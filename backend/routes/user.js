@@ -129,4 +129,16 @@ router.get('/bulk', async(req,res) => {
         })
 })
 
+router.get('/all', async(req,res) => {
+    const users = await User.find({})
+    res.json({
+        user: users.map(user => ({
+            _id: user._id,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            username: user.username
+        }))
+    })
+})
+
 module.exports = router;
