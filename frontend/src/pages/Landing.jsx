@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { GiWallet } from "react-icons/gi";
 import {useNavigate} from 'react-router-dom';
 
